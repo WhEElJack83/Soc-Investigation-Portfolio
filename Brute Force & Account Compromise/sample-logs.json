@@ -1,0 +1,382 @@
+```json
+[
+  {
+    "@timestamp": "2026-10-06T10:14:02Z",
+    "event": {
+      "category": ["authentication"],
+      "type": ["start"],
+      "outcome": "failure",
+      "action": "user_login"
+    },
+    "user": {
+      "name": "j.smith"
+    },
+    "source": {
+      "ip": "185.XXX.XXX.42"
+    },
+    "host": {
+      "name": "web-prod-01"
+    },
+    "service": {
+      "name": "customer-portal"
+    },
+    "message": "Failed authentication attempt"
+  },
+  {
+    "@timestamp": "2026-10-06T10:14:08Z",
+    "event": {
+      "category": ["authentication"],
+      "type": ["start"],
+      "outcome": "failure",
+      "action": "user_login"
+    },
+    "user": {
+      "name": "j.smith"
+    },
+    "source": {
+      "ip": "185.XXX.XXX.42"
+    },
+    "host": {
+      "name": "web-prod-01"
+    },
+    "message": "Failed authentication attempt"
+  },
+  {
+    "@timestamp": "2026-10-06T10:14:15Z",
+    "event": {
+      "category": ["authentication"],
+      "type": ["start"],
+      "outcome": "failure",
+      "action": "user_login"
+    },
+    "user": {
+      "name": "j.smith"
+    },
+    "source": {
+      "ip": "185.XXX.XXX.42"
+    },
+    "host": {
+      "name": "web-prod-01"
+    },
+    "message": "Failed authentication attempt"
+  },
+  {
+    "@timestamp": "2026-10-06T10:14:21Z",
+    "event": {
+      "category": ["authentication"],
+      "type": ["start"],
+      "outcome": "failure",
+      "action": "user_login"
+    },
+    "user": {
+      "name": "j.smith"
+    },
+    "source": {
+      "ip": "185.XXX.XXX.42"
+    },
+    "host": {
+      "name": "web-prod-01"
+    },
+    "message": "Failed authentication attempt"
+  },
+  {
+    "@timestamp": "2026-10-06T10:14:29Z",
+    "event": {
+      "category": ["authentication"],
+      "type": ["start"],
+      "outcome": "failure",
+      "action": "user_login"
+    },
+    "user": {
+      "name": "j.smith"
+    },
+    "source": {
+      "ip": "185.XXX.XXX.42"
+    },
+    "host": {
+      "name": "web-prod-01"
+    },
+    "message": "Failed authentication attempt"
+  },
+  {
+    "@timestamp": "2026-10-06T10:14:36Z",
+    "event": {
+      "category": ["authentication"],
+      "type": ["start"],
+      "outcome": "failure",
+      "action": "user_login"
+    },
+    "user": {
+      "name": "j.smith"
+    },
+    "source": {
+      "ip": "185.XXX.XXX.42"
+    },
+    "host": {
+      "name": "web-prod-01"
+    },
+    "message": "Failed authentication attempt"
+  },
+  {
+    "@timestamp": "2026-10-06T10:14:44Z",
+    "event": {
+      "category": ["authentication"],
+      "type": ["start"],
+      "outcome": "failure",
+      "action": "user_login"
+    },
+    "user": {
+      "name": "j.smith"
+    },
+    "source": {
+      "ip": "185.XXX.XXX.42"
+    },
+    "host": {
+      "name": "web-prod-01"
+    },
+    "message": "Failed authentication attempt"
+  },
+  {
+    "@timestamp": "2026-10-06T10:14:51Z",
+    "event": {
+      "category": ["authentication"],
+      "type": ["start"],
+      "outcome": "failure",
+      "action": "user_login"
+    },
+    "user": {
+      "name": "j.smith"
+    },
+    "source": {
+      "ip": "185.XXX.XXX.42"
+    },
+    "host": {
+      "name": "web-prod-01"
+    },
+    "message": "Failed authentication attempt"
+  },
+  {
+    "@timestamp": "2026-10-06T10:15:03Z",
+    "event": {
+      "category": ["authentication"],
+      "type": ["start"],
+      "outcome": "success",
+      "action": "user_login"
+    },
+    "user": {
+      "name": "j.smith"
+    },
+    "source": {
+      "ip": "185.XXX.XXX.42"
+    },
+    "client": {
+      "user": {
+        "agent": "Mozilla/5.0"
+      }
+    },
+    "host": {
+      "name": "web-prod-01"
+    },
+    "message": "Successful authentication"
+  },
+
+  {
+    "@timestamp": "2026-10-06T10:15:05Z",
+    "event": {
+      "category": ["authentication"],
+      "outcome": "failure",
+      "action": "Logon",
+      "code": "4625"
+    },
+    "user": {
+      "name": "j.smith"
+    },
+    "source": {
+      "ip": "185.XXX.XXX.42"
+    },
+    "host": {
+      "name": "WIN-APP-01"
+    },
+    "winlog": {
+      "channel": "Security"
+    },
+    "message": "An account failed to log on"
+  },
+  {
+    "@timestamp": "2026-10-06T10:15:08Z",
+    "event": {
+      "category": ["authentication"],
+      "outcome": "success",
+      "action": "Logon",
+      "code": "4624"
+    },
+    "user": {
+      "name": "j.smith"
+    },
+    "source": {
+      "ip": "185.XXX.XXX.42"
+    },
+    "host": {
+      "name": "WIN-APP-01"
+    },
+    "winlog": {
+      "channel": "Security"
+    },
+    "message": "An account was successfully logged on"
+  },
+
+  {
+    "@timestamp": "2026-10-06T10:15:11Z",
+    "event": {
+      "category": ["authentication"],
+      "outcome": "failure",
+      "action": "ssh_login"
+    },
+    "user": {
+      "name": "jsmith"
+    },
+    "source": {
+      "ip": "185.XXX.XXX.42"
+    },
+    "host": {
+      "name": "linux-prod-01"
+    },
+    "service": {
+      "name": "sshd"
+    },
+    "message": "Failed password for user jsmith"
+  },
+  {
+    "@timestamp": "2026-10-06T10:15:18Z",
+    "event": {
+      "category": ["authentication"],
+      "outcome": "success",
+      "action": "ssh_login"
+    },
+    "user": {
+      "name": "jsmith"
+    },
+    "source": {
+      "ip": "185.XXX.XXX.42"
+    },
+    "host": {
+      "name": "linux-prod-01"
+    },
+    "service": {
+      "name": "sshd"
+    },
+    "message": "Accepted password for user jsmith"
+  },
+
+  {
+    "@timestamp": "2026-10-06T10:15:25Z",
+    "event": {
+      "category": ["authentication"],
+      "action": "ConsoleLogin",
+      "outcome": "success"
+    },
+    "cloud": {
+      "provider": "aws",
+      "service": {
+        "name": "cloudtrail"
+      }
+    },
+    "user": {
+      "name": "j.smith"
+    },
+    "source": {
+      "ip": "185.XXX.XXX.42"
+    },
+    "aws": {
+      "cloudtrail": {
+        "eventSource": "signin.amazonaws.com",
+        "eventName": "ConsoleLogin",
+        "additionalEventData": {
+          "MFAUsed": "No"
+        }
+      }
+    },
+    "message": "AWS console login"
+  },
+
+  {
+    "@timestamp": "2026-10-06T10:16:02Z",
+    "event": {
+      "category": ["iam"],
+      "action": "ListUsers"
+    },
+    "cloud": {
+      "provider": "aws",
+      "service": {
+        "name": "iam"
+      }
+    },
+    "user": {
+      "name": "j.smith"
+    },
+    "source": {
+      "ip": "185.XXX.XXX.42"
+    },
+    "aws": {
+      "cloudtrail": {
+        "eventSource": "iam.amazonaws.com",
+        "eventName": "ListUsers"
+      }
+    },
+    "message": "IAM user enumeration"
+  },
+
+  {
+    "@timestamp": "2026-10-06T10:16:45Z",
+    "event": {
+      "category": ["web"],
+      "action": "login",
+      "outcome": "failure"
+    },
+    "http": {
+      "request": {
+        "method": "POST"
+      },
+      "response": {
+        "status_code": 401
+      }
+    },
+    "url": {
+      "path": "/login"
+    },
+    "source": {
+      "ip": "185.XXX.XXX.42"
+    },
+    "user_agent": {
+      "original": "python-requests/2.31.0"
+    },
+    "cloudflare": {
+      "action": "managed_challenge",
+      "bot_score": 12
+    },
+    "message": "Cloudflare observed automated login traffic"
+  },
+
+  {
+    "@timestamp": "2026-10-06T10:16:51Z",
+    "event": {
+      "category": ["process"],
+      "action": "process_started"
+    },
+    "host": {
+      "name": "WIN-APP-01"
+    },
+    "user": {
+      "name": "j.smith"
+    },
+    "process": {
+      "name": "powershell.exe",
+      "command_line": "powershell.exe -NoProfile -Command whoami"
+    },
+    "source": {
+      "ip": "185.XXX.XXX.42"
+    },
+    "message": "PowerShell process started after suspicious authentication"
+  }
+]
+```
