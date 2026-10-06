@@ -1,71 +1,73 @@
 ```yaml
-title: Multiple Failed Logins Followed by Successful Authentication
+title: Brute Force Followed by Successful Authentication
+id: *****
 status: experimental
 description: |
   Detects multiple failed authentication attempts against the same user
-  from the same source IP, followed by a successful authentication
-  within a short time window. This pattern may indicate a successful
-  brute-force attack and potential account compromise.
+  from the same source IP followed by a successful authentication within
+  a short time window. This pattern may indicate a successful brute-force
+  attack and potential account compromise.
 
-author: SOC Investigation
+author: SOC Investigation Lab
 date: 2026/10/06
 
+correlation:
+  type: temporal
+  rules:
+    - Brute Force Authentication Failures
+    - Successful Authentication
+  group-by:
+    - source.ip
+    - user.name
+  timespan: 10m
+
+condition:
+  type: event_count
+  rule: Brute Force Authentication Failures
+  count: 5
+  condition: ">="
+
+level: high
+
+tags:
+  - attack.credential_access
+  - attack.t1110
+  - attack.t1110.001
+  - attack.t1078
+
+---
+title: Brute Force Authentication Failures
+id: 91f3d6c2-4a87-4c3f-b8a1-52e7d9f40123
+status: experimental
+description: Detects failed authentication attempts.
+author: SOC Investigation Lab
+
 logsource:
-  product: authentication
-  service: login
+  category: authentication
 
 detection:
-  failed_login:
+  selection:
     event.category: authentication
     event.outcome: failure
+  condition: selection
 
-  successful_login:
+level: medium
+
+---
+title: Successful Authentication
+id: 5e82b1a7-6d34-4f91-a8c2-73d5e9b40126
+status: experimental
+description: Detects successful authentication events.
+author: SOC Investigation
+
+logsource:
+  category: authentication
+
+detection:
+  selection:
     event.category: authentication
     event.outcome: success
+  condition: selection
 
-  timeframe: 10m
-
-  threshold:
-    count: 5
-    group_by:
-      - source.ip
-      - user.name
-
-  condition: |
-    5 or more failed authentication attempts
-    followed by a successful authentication
-    from the same source IP for the same user
-    within 10 minutes
-
-severity: high
-risk_score: 80
-
-mitre_attack:
-  - T1110
-  - T1110.001
-  - T1078
-
-false_positives:
-  - User repeatedly entering an incorrect password
-  - Expired or recently changed credentials
-  - Saved credentials using an outdated password
-  - VPN or network changes
-  - Automated application authentication failures
-  - Legitimate login from a new location or device
-
-investigation:
-  - Identify the affected username and source IP.
-  - Review whether other accounts were targeted from the same source.
-  - Validate the successful login location and device.
-  - Check MFA activity where applicable.
-  - Review activity immediately after the successful authentication.
-  - Correlate authentication, endpoint, WAF and cloud telemetry.
-
-response:
-  - Validate the successful login with the affected user.
-  - Lock or disable the account if compromise is suspected.
-  - Reset the password and validate MFA.
-  - Revoke suspicious sessions, tokens or API keys.
-  - Block the source IP where appropriate.
-  - Investigate the endpoint if credential theft is suspected.
+level: low
 ```
